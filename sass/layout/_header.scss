@@ -1,0 +1,94 @@
+.logo {
+  color: var(--black);
+  font-family: raleway;
+  @include font(700, 26px, 1.19);
+  text-decoration: none;
+  font-style: normal;
+  margin-right: 93px;
+}
+
+.logo_blue {
+  color: var(--blue);
+}
+
+.header {
+  display: flex;
+}
+
+.header-border {
+  border-bottom: 1px solid #ececec;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  max-height: 80px;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts {
+  margin-left: auto;
+}
+
+.contacts-center {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__mail {
+  margin-right: 50px;
+}
+
+.contacts__mail_icon {
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 12px;
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.header__tel_icon {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 16px;
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.nav {
+  font-style: normal;
+  @include font(500, 14px, 1.71, 0.02em);
+  display: flex;
+}
+
+.nav .link {
+  color: var(--dark_text);
+  text-decoration: none;
+  padding: 32px 0px;
+  &:hover,
+  &:focus {
+    color: var(--blue);
+  }
+  &.current {
+    color: var(--blue);
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 4px;
+      bottom: 0px;
+      background-color: var(--blue);
+      border-radius: 2px;
+    }
+  }
+}
+
+.contacts .link {
+  color: var(--grey);
+}

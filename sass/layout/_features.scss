@@ -1,0 +1,39 @@
+.features {
+  padding-top: 94px;
+  min-width: 1170px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.features-header {
+  margin-bottom: 10px;
+}
+
+.feautures-list {
+  display: flex;
+  margin-left: -30px;
+}
+
+.feautures-list__container {
+  @extend %align;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--button_grey);
+}
+
+.feautures-list__icon {
+  width: 70px;
+  height: 70px;
+}
+
+.feautures-list__item {
+  flex-basis: calc(100% / 4 * 30px);
+  margin-left: 30px;
+}
+
+.features-header_desc {
+  font-style: normal;
+  @include font(400, 14px, 1.71);
+  max-width: 270px;
+}
