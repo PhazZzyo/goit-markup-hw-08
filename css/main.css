@@ -36,11 +36,21 @@ img {
   color: var(--dark_text);
   text-align: center;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
-  font-style: normal;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .header2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    font-style: normal;
+    margin-bottom: 50px;
+  }
 }
 
 .header3 {
@@ -82,7 +92,6 @@ img {
 }
 
 .container {
-  width: 100%;
   margin: 0 auto;
   padding: 0px 15px;
 }
@@ -278,6 +287,7 @@ img {
 }
 
 .hero {
+  margin: 0 auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_bg_mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -379,8 +389,8 @@ img {
 }
 
 .feautures-list__item {
-  margin-bottom: 30px;
   text-align: center;
+  margin-bottom: 30px;
   width: 100%;
 }
 
@@ -426,9 +436,22 @@ img {
   min-width: 354px;
 }
 
+@media screen and (min-width: 1200px) {
+  .features-header_desc {
+    max-width: 270px;
+  }
+}
+
 .services {
+  display: none;
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+@media screen and (min-width: 1200px) {
+  .services {
+    display: block;
+  }
 }
 
 .services-list {
@@ -470,19 +493,33 @@ img {
   font-size: 16px;
 }
 
-.team-list {
-  display: flex;
-  margin-right: -30px;
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
 
 .team-list__item {
-  width: calc((100% - 120px) / 4);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  margin-bottom: 30px;
 }
 
-.team-list__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .team-list__item {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list__item {
+    flex-basis: calc(100% / 4 - 30px);
+    max-width: 270px;
+  }
 }
 
 .team-header {
