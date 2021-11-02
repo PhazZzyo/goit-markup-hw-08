@@ -1,16 +1,26 @@
-.clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -30px;
+  margin-left: -30px;
+}
+
+.clients-list__item {
+  max-width: 170px;
+  height: 92px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  flex-basis: calc(100% / 2 - 30px);
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 6 - 30px);
+  }
 }
 
 .clients-list__button {
   padding: 16px 32px;
-  width: 170px;
-  height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 5px;
   fill: var(--icon_grey);
@@ -27,8 +37,4 @@
 
 .clients-list__icon {
   @extend %align;
-}
-
-.clients-list__item:not(:last-child) {
-  padding-right: 30px;
 }

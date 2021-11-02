@@ -2,8 +2,8 @@
   color: var(--grey);
   background-color: #f5f4fa;
   font-size: 16px;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  // padding-top: 94px;
+  // padding-bottom: 94px;
   .header3 {
     color: var(--dark_text);
     text-transform: none;
@@ -12,6 +12,7 @@
 }
 
 .team-list {
+  margin-bottom: -30px;
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
