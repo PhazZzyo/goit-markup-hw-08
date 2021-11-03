@@ -12,7 +12,7 @@
 
 .header {
   @media screen and (min-width: 480px) {
-    // max-width: 480px;
+    width: 100%;
   }
   @media screen and (min-width: 768px) {
     max-width: 768px;
@@ -100,7 +100,7 @@
   }
   @media screen and (min-width: 1200px) {
     display: flex;
-    margin-left: 93px;
+    margin-left: auto;
   }
 }
 
@@ -122,8 +122,8 @@
   margin-right: 10px;
 }
 
-.contacts__tel {
-}
+// .contacts__tel {
+// }
 
 .contacts__tel_icon {
   display: inline-block;
