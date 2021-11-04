@@ -388,6 +388,7 @@ img {
   display: flex;
   flex-direction: column;
   height: 100%;
+  max-width: none;
 }
 
 .mob.is-hidden {
