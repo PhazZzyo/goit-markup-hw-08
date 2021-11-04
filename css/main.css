@@ -372,7 +372,7 @@ img {
 }
 
 .mob {
-  position: absolute;
+  position: fixed;
   background-color: var(--white);
   width: 100vw;
   height: 100vh;
@@ -497,7 +497,7 @@ img {
 .mob-menu__close {
   position: relative;
   top: 0px;
-  right: 15px;
+  right: 5px;
 }
 
 .hero {
