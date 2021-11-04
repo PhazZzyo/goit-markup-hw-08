@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   max-width: 460px;
   margin-bottom: 40px;
+  justify-content: flex-start;
   @media screen and (min-width: 768px) {
     justify-content: center;
     max-width: 1200px;
