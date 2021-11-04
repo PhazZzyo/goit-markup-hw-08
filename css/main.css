@@ -86,7 +86,7 @@ img {
 }
 
 .backdrop, .modal-close, .mob-menu__open,
-.mob-menu__close, .feautures-list__container, .services-list__block, .clients-list__icon {
+.mob-menu__close, .feautures-list__container, .services-list__block, .clients-list__icon, .gal-list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1043,13 +1043,15 @@ img {
 .port-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 460px;
+  align-items: start;
+  margin-left: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
   .port-list {
     flex-wrap: nowrap;
     display: flex;
-    justify-content: center;
     margin-bottom: 50px;
   }
 }
@@ -1090,7 +1092,7 @@ img {
 }
 
 .gal-list {
-  align-items: center;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
 }
@@ -1107,12 +1109,12 @@ img {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
-  margin-left: 30px;
   margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
   .gal-list__item {
+    margin-left: 30px;
     flex-basis: calc((100% - 90px) / 2);
   }
 }
