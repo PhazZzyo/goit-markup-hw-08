@@ -11,15 +11,8 @@
 }
 
 .header {
-  @media screen and (min-width: 480px) {
-    width: 100%;
-  }
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
-  }
-  @media screen and (min-width: 1200px) {
-    max-width: 1200px;
-  }
+  width: 100%;
+  align-content: center;
 }
 
 .header-border {
@@ -31,14 +24,15 @@
   display: flex;
   align-items: center;
   @media screen and (min-width: 480px) {
-    max-width: 480px;
-  }
-  @media screen and (min-width: 768px) {
-    padding: 26px 15px;
     width: 100%;
   }
+  @media screen and (min-width: 768px) {
+    padding: 21px 15px 20px 15px;
+  }
   @media screen and (min-width: 1200px) {
-    padding-left: 215px;
+    margin: 0 auto;
+    width: 1200px;
+    padding: 25px;
   }
 }
 
@@ -70,6 +64,7 @@
     color: var(--blue);
   }
   &.current {
+    position: relative;
     color: var(--blue);
     &::after {
       position: absolute;
@@ -77,7 +72,7 @@
       content: "";
       width: 100%;
       height: 4px;
-      bottom: 0px;
+      bottom: -31px;
       background-color: var(--blue);
       border-radius: 2px;
     }
@@ -86,6 +81,10 @@
 
 .contacts .link {
   text-decoration: none;
+  @include font(500, 12px, 1.16, 0.02em);
+  @media screen and (min-width: 1200px) {
+    @include font(500, 14px, 1.14, 0.02em);
+  }
   &:hover,
   &:focus {
     color: var(--blue);
@@ -96,11 +95,10 @@
   display: none;
   @media screen and (min-width: 768px) {
     display: block;
-    margin-left: 88px;
+    margin-left: auto;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
-    margin-left: auto;
   }
 }
 
@@ -110,7 +108,10 @@
 }
 
 .contacts__mail {
-  margin-bottom: 10px;
+  margin: 0px 0px 10px 0px;
+  @media screen and (min-width: 1200px) {
+    margin: 0px 30px 0px 0px;
+  }
 }
 
 .contacts__mail_icon {
@@ -138,39 +139,15 @@
   color: var(--grey);
 }
 
-.mob-menu__open,
-.mob-menu__close {
-  width: 40px;
-  height: 40px;
-  fill: var(--black);
-  display: flex;
-  @extend %align;
-  border: none;
-  background: transparent;
-  margin-left: auto;
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-  &:hover,
-  &:focus {
-    fill: var(--blue);
-  }
-}
-
-.mob-menu__close {
-  position: relative;
-  right: -25px;
-  top: -100px;
-}
-
 .mob {
   position: absolute;
   background-color: var(--white);
   width: 100vw;
   height: 100vh;
   top: 0;
-  padding: 48px 40px;
+  padding: 10px 15px 48px 40px;
   .container {
+    padding: 0;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -246,4 +223,29 @@
   text-decoration: none;
   color: var(--blue);
   @include font(500, 18px, 1.22, 0.02em);
+}
+
+.mob-menu__open,
+.mob-menu__close {
+  width: 40px;
+  height: 40px;
+  fill: var(--black);
+  display: flex;
+  @extend %align;
+  border: none;
+  background: transparent;
+  margin-left: auto;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  &:hover,
+  &:focus {
+    fill: var(--blue);
+  }
+}
+
+.mob-menu__close {
+  position: relative;
+  top: 0px;
+  right: 15px;
 }
