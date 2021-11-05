@@ -7,8 +7,6 @@
 }
 
 .clients-list__item {
-  max-width: 170px;
-  height: 92px;
   margin-left: 30px;
   margin-bottom: 30px;
   flex-basis: calc(100% / 2 - 30px);
@@ -20,8 +18,11 @@
   }
 }
 
-.clients-list__button {
-  padding: 16px 32px;
+.clients-list__link {
+  display: flex;
+  box-sizing: border-box;
+  @extend %align;
+  height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 5px;
   fill: var(--icon_grey);
@@ -34,8 +35,12 @@
     fill: var(--blue);
     border: 1px solid var(--blue);
   }
+  @media screen and (min-width: 1200px) {
+    max-width: 170px;
+  }
 }
 
 .clients-list__icon {
   @extend %align;
+  margin: 16px 32px;
 }

@@ -86,7 +86,7 @@ img {
 }
 
 .backdrop, .modal-close, .mob-menu__open,
-.mob-menu__close, .feautures-list__container, .services-list__block, .clients-list__icon {
+.mob-menu__close, .feautures-list__container, .services-list__block, .clients-list__link, .clients-list__icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -651,7 +651,7 @@ img {
 }
 
 .services .container {
-  padding: 0;
+  padding: 0px 15px 94px 15px;
 }
 
 .services {
@@ -812,8 +812,6 @@ img {
 }
 
 .clients-list__item {
-  max-width: 170px;
-  height: 92px;
   margin-left: 30px;
   margin-bottom: 30px;
   flex-basis: calc(100% / 2 - 30px);
@@ -831,8 +829,10 @@ img {
   }
 }
 
-.clients-list__button {
-  padding: 16px 32px;
+.clients-list__link {
+  display: flex;
+  box-sizing: border-box;
+  height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 5px;
   fill: var(--icon_grey);
@@ -841,10 +841,20 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-list__button:hover,
-.clients-list__button :focus {
+.clients-list__link:hover,
+.clients-list__link :focus {
   fill: var(--blue);
   border: 1px solid var(--blue);
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-list__link {
+    max-width: 170px;
+  }
+}
+
+.clients-list__icon {
+  margin: 16px 32px;
 }
 
 .footer {
@@ -1122,11 +1132,11 @@ img {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
   .gal-list__item {
-    margin-bottom: 30px;
     margin-left: 30px;
     flex-basis: calc((100% - 60px) / 2);
   }
