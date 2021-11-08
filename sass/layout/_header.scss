@@ -123,9 +123,6 @@
   margin-right: 10px;
 }
 
-// .contacts__tel {
-// }
-
 .contacts__tel_icon {
   display: inline-block;
   content: "";
@@ -147,17 +144,17 @@
   top: 0;
   z-index: 2;
   padding: 10px 15px 48px 40px;
+  transform: translateX(0);
+  transition: transform 250ms ease-in-out;
   .container {
     padding: 0;
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
-    max-width: none;
   }
   &.is-hidden {
-    visibility: hidden;
-    opacity: 0;
+    transform: translateX(100%);
     pointer-events: none;
   }
   @media screen and (min-width: 768px) {
